@@ -20,7 +20,7 @@ export const Registro = () => {
     setErrorDatos('')
     
     try {
-      const response = await fetch(`${url}registro`, {
+      const response = await fetch(`/registro`, {
         method: 'POST',
         body: JSON.stringify({ email: email, username: username, password: password, rpassword: repeatpassword, esArtista: esArtista }),
         headers: { 'Content-Type': 'application/json' }
