@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start": "node node_modules/vite/bin/vite.js preview"
+    "start": "node node_modules/vite/bin/vite.js preview --$PORT --host"
   },
   "dependencies": {
     "react": "^19.1.1",
