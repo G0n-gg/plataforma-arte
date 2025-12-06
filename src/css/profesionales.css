@@ -1,0 +1,62 @@
+.paginaProfesionales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 600px));
+  align-content: center;
+  justify-content: center;
+  grid-auto-flow: row;
+  grid-gap: 1rem;
+  padding: 3rem;
+  height: 100%;
+}
+
+.paginaProfesionales .cardProf {
+  height: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: row;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  border-radius: 5px;
+  padding: 1.5rem;
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(0, 10, 102, 0.555);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paginaProfesionales .cardProf:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(4, 0, 37, 0.315);
+  cursor: pointer;
+}
+
+.paginaProfesionales .profDat {
+  flex: 1 1 0;
+}
+
+.paginaProfesionales .profDat p {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.paginaProfesionales .profDat p {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'Story Script', 'Courier New', Courier, monospace;
+}
+
+.paginaProfesionales .profImg {
+  display: flex;
+  flex: 1 1 0;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+}
+
+.paginaProfesionales .profImg img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@font-face {
+  font-family: 'ExpletusSans';
+  src: url('/ExpletusSans-SemiBold.woff2') format('woff2'),
+       url('/ExpletusSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+body {
+  background: linear-gradient(145deg, #ff0000ad, #0059ffa6);
+  height: 100%;
+  width: 100%;
+}
+
+#wrapper {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'paginas'
+    'footer';
+  min-height: 100vh;
+}
+
+.paginas {
+  width: 100%;
+  grid-area: paginas;
+}
+
+ul {
+  list-style: none;
+}
+

@@ -1,0 +1,35 @@
+.perfilLogins {
+    padding: 1rem;
+    height: 300px;
+    overflow-y: scroll;
+    scrollbar-color: rgb(255, 255, 255) transparent;
+    scrollbar-width: thin;
+}
+
+.perfilLogins .tablaLogins {
+    width: 30%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.tablaLogins thead {
+    background-color: #ffffff;
+}
+
+.tablaLogins th {
+    padding: 10px;
+}
+
+.tablaLogins td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0.548);
+}

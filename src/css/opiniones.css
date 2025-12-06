@@ -1,0 +1,88 @@
+.opiniones {
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.opiniones h1 {
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3);
+}
+
+.opiniones .formulario {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.opiniones form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+    width: 30%;
+    max-height: 500px;
+}
+
+.opiniones textarea {
+    resize: none;
+    padding: 1rem;
+    color: white;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: white;
+}
+
+.opiniones textarea:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.6); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); 
+    background-color: rgba(255, 255, 255, 0.15); 
+}
+
+.opiniones button {
+    margin: auto;
+    padding: 1rem;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.842);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.opiniones button:hover {
+   box-shadow: 0 0 10px rgb(0, 0, 0);
+   transition: 0.3s;
+}
+
+.opiniones .userOpiniones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opiniones ul {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.opiniones li {
+    padding: 1rem;
+    word-break: break-word;
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.opiniones span {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: oblique;
+    padding: 1rem;
+}

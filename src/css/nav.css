@@ -1,0 +1,71 @@
+nav {
+  position: fixed;
+  height: 100%;
+  z-index: 1000;
+  padding: 1rem;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 20px 50px rgb(255, 255, 255);
+  font-family: 'ExpletusSans', Arial, Helvetica, sans-serif;
+  font-display: swap;
+  color: rgb(255, 255, 255);
+}
+
+nav .botonCerrarNav {
+  position: absolute;
+  right: 20px;
+  transition: 0.3s;
+}
+
+nav .iconMenu {
+  width: 40px;
+  height: 40px;
+}
+
+nav .iconMenu:hover {
+  cursor: pointer;
+  scale: 1.2;
+  transition: 0.3s;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10% 0;
+  font-size: 1.4em;
+  border: 2px solid transparent;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.479);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+nav .logo {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+nav h1 {
+  margin-bottom: 1rem;
+  transition: 0.3;
+}
+
+nav h1:hover,
+a:hover {
+  color: rgba(232, 234, 255, 0.678);
+  text-shadow: 2px 2px 5px #cde8ff52;
+  transition: 0.3s;
+}
+
+nav a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav img {
+  width: 100%;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+}

@@ -1,0 +1,89 @@
+.paginaInicio {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100%;
+  overflow: hidden;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+}
+
+.prioArtistas, .masRecomendados {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-radius: 5px;
+  justify-content: space-evenly;
+  box-shadow: -1px -1px 20px 1px rgba(255, 255, 255, 0.219);
+}
+
+.prioArtistas .cardProf, .masRecomendados .cardProf {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  padding: 1rem;
+}
+
+.prioArtistas .profDat p, .masRecomendados .cardProf p {
+   margin-bottom: 1rem;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Story Script', 'Courier New', Courier, monospace;
+  letter-spacing: 3px;
+}
+
+.prioArtistas .profImg, .masRecomendados .profImg {
+  padding: 1rem;
+  transition: 0.3s;
+}
+
+.prioArtistas .profImg:hover, .masRecomendados .profImg:hover {
+  scale: 1.1;
+  transition: 0.3s;
+}
+
+.prioArtistas img, .masRecomendados img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0px -2px 20px 1px;
+}
+
+.ultimasImagenes {
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.paginaInicio h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  text-shadow: 2px 2px 4px #000000;
+  color: white;
+}
+
+.ultimasImagenes .imagenUsuario {
+  display: none;
+}
+
+.ultimasImagenes .galeriaImagenes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ultimasImagenes .imagenProfUsuario{
+  border-radius: 0px;
+}
