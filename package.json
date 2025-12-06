@@ -8,7 +8,8 @@
     "build": "node node_modules/vite/bin/vite.js build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "start": "serve -s dist"
   },
   "dependencies": {
     "react": "^19.1.1",
