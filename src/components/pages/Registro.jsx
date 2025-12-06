@@ -18,7 +18,7 @@ export const Registro = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setErrorDatos('')
-    
+
     try {
       const response = await fetch(`${url}registro`, {
         method: 'POST',
@@ -26,10 +26,14 @@ export const Registro = () => {
         headers: { 'Content-Type': 'application/json' }
       })
 
-      const datos = await response.json()
-      
-      console.log(datos)
+      let datos = await response.json()
 
+      try {
+        datos = await response.json();
+      } catch {
+        datos = {};
+      }
+      
       if (!response.ok) {
         setErrorDatos(datos.error || 'Error no declarado')
         return
@@ -47,7 +51,7 @@ export const Registro = () => {
         <Link to={'/inicio'}>
           <div className='salir'><div><AiOutlineCloseCircle></AiOutlineCloseCircle></div></div>
         </Link>
-        
+
         <div>
           <label htmlFor='email'>Correo electrónico:</label>
           <input type='text' name='email' id='email' value={email} placeholder='Email...' onChange={(e) => setEmail(e.target.value)} />
@@ -72,7 +76,7 @@ export const Registro = () => {
           <label className='tipousuario' htmlFor='tipousuario'>Soy un artista:</label>
           <input type='checkbox' name='tipousuario' id='tipousuario' checked={esArtista} onChange={(e) => setEsartista(e.target.checked)} />
         </div>
-        
+
         <div>
           <button type='submit'>Crear usuario</button>
         </div>
