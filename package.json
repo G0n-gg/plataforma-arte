@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start": "node node_modules/serve/bin/serve.js -s dist"
+    "start": "npx serve -s dist"
   },
   "dependencies": {
     "react": "^19.1.1",
