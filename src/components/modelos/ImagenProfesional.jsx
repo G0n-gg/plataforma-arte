@@ -1,5 +1,3 @@
-import { url } from '../../config/config';
-
 export const ImagenProfesional = ({ artistaUsername, enlace, onBorrar, borrarImagenUsuario, galeria, ampliacion}) => {
 
     const ampliar = () => {

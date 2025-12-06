@@ -1,5 +1,4 @@
 import { useLocation } from 'react-router-dom'
-import { url } from '../../config/config'
 
 export const Profesional = ({nombre, descripcion, imagen}) => {
   const ruta = useLocation().pathname

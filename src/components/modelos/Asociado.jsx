@@ -1,5 +1,3 @@
-import { url } from "../../config/config"
-
 export const Asociado = ({enlace, imagen}) => {
 
   return (

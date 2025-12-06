@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ImagenProfesional } from './imagenProfesional';
+import { ImagenProfesional } from './ImagenProfesional'
 import { url } from '../../config/config';
 import { Link } from 'react-router-dom';
 
