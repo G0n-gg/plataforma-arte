@@ -19,7 +19,6 @@ export const Footer = () => {
           <h3>Ayuda</h3>
           <ul>
             <Link to='/empezando'><li>Empezando</li></Link>
-            <li>Servicios</li>
             <Link to={'/contacto'}><li>Contacto</li></Link>
           </ul>
         </div>
