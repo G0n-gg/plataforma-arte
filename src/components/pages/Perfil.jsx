@@ -751,7 +751,7 @@ export const Perfil = () => {
                         <div><span>Nombre de asociado:</span> {buscarNombreAsociado}</div>
                         <div><span>Enlace:</span> {buscarEnlaceAsociado}</div>
                         <div><span>Imagen:</span></div>
-                        <img src={`${url}${buscarImagenAsociado}` || null} alt=''></img>
+                        <img src={`${buscarImagenAsociado}` || null} alt=''></img>
                     </div>
 
                         <div className="adminInputFlex">
