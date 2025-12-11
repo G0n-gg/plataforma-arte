@@ -423,7 +423,7 @@ export const Perfil = () => {
         const data = await response.json()
         if (response.ok) {
             console.log(data)
-            setCrearImagenAsociado(data)
+            setCrearImagenAsociado(data.imagen)
         }
     }
 
