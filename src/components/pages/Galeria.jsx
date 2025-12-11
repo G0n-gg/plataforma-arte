@@ -10,21 +10,28 @@ export const Galeria = () => {
       try {
         const response = await fetch(`${url}galeria`)
 
-        if(!response.ok) {
+        if (!response.ok) {
           console.log('Error en petición', response)
-        } 
+        }
 
         const datos = await response.json()
+
+        if (!Array.isArray(datos)) {
+          console.error("No hay imágenes o error", datos)
+          setGaleria([]) 
+          return
+        }
+        
         const ultimas = datos.reverse()
         setGaleria(ultimas)
       } catch (error) {
         console.log('Error al pedir imágenes: ', error)
       }
     }
-    
+
     getImagenes()
   }, [])
-  
+
   return (
     <div className='galeriaPrincipal'>
       <GaleriaProfesional usuario={{}} datosImagenes={galeria} galeria={true}></GaleriaProfesional>
