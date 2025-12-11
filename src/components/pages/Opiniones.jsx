@@ -29,10 +29,13 @@ export const Opiniones = () => {
         })
 
         const datos = await response.json()
-        console.log(datos)
-
-        const invertirLista = datos.reverse()
-        setListaOpiniones(invertirLista)
+      
+        if (Array.isArray(datos)) {
+          setListaOpiniones([...datos].reverse());
+        } else {
+          console.error("No hay opiniones o Error");
+          return
+        }
       } catch (error) {
         console.log(error)
       }
@@ -54,7 +57,7 @@ export const Opiniones = () => {
           credentials: 'include'
         })
 
-        if(!response.ok) {
+        if (!response.ok) {
           return
         }
 
