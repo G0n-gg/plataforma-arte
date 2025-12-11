@@ -410,7 +410,10 @@ export const Perfil = () => {
     }
 
     const handleImagenAsociado = async (e) => {
+        e.preventDefault()
+
         setEstadoSubida(true)
+        
         const file = e.target.files[0]
         if (!file) return
 
