@@ -47,10 +47,10 @@ export const Perfil = () => {
     const [buscarEnlaceAsociado, setBuscarEnlaceAsociado] = useState('')
     const [buscarImagenAsociado, setBuscarImagenAsociado] = useState('')
     const [adminAsociadoMsg, setAdminasociadoMsg] = useState('')
+    const [estadoSubida, setEstadoSubida] = useState(false)
 
     const [putNombreAsociado, setPutNombreAsociado] = useState('')
     const [putEnlaceAsociado, setPutEnlaceAsociado] = useState('')
-    const [putImagenAsociado, setPutImagenAsociado] = useState('')
     const [asociadoMsgActualizado, setAsociadoMsgActualizado] = useState('')
 
     //-------------Datos para listado logins---------------------------------
@@ -410,6 +410,7 @@ export const Perfil = () => {
     }
 
     const handleImagenAsociado = async (e) => {
+        setEstadoSubida(true)
         const file = e.target.files[0]
         if (!file) return
 
@@ -424,9 +425,9 @@ export const Perfil = () => {
 
         const datos = await response.json()
         if (response.ok) {
-            console.log(datos)
             setCrearImagenAsociado(datos)
         }
+        setEstadoSubida(false)
     }
 
     const handleBuscarAsociado = async () => {
@@ -731,7 +732,7 @@ export const Perfil = () => {
                                     <input type="file" name="crearImagenAsociado" accept="image/*" required ref={fileInputAsociadoRef} onChange={handleImagenAsociado} />
                                 </div>
 
-                                <button type="submit" disabled={crearImagenAsociado == '' ? true : false}>Crear Asociado</button>
+                                <button type="submit" disabled={estadoSubida || !crearImagenAsociado}>Crear Asociado</button>
                             </form>
                         </div>
                     </div>
