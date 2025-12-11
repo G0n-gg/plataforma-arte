@@ -728,10 +728,10 @@ export const Perfil = () => {
 
                                 <div>
                                     <label htmlFor="imagen">Imagen:</label>
-                                    <input type="file" name="crearImagenAsociado" accept="image/*" required ref={fileInputAsociadoRef} onChange={handleImagenAsociado} disabled={crearImagenAsociado == '' ? true : false}/>
+                                    <input type="file" name="crearImagenAsociado" accept="image/*" required ref={fileInputAsociadoRef} onChange={handleImagenAsociado} />
                                 </div>
 
-                                <button type="submit">Crear Asociado</button>
+                                <button type="submit" disabled={crearImagenAsociado == '' ? true : false}>Crear Asociado</button>
                             </form>
                         </div>
                     </div>
