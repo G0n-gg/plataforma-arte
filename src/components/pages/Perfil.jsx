@@ -422,10 +422,10 @@ export const Perfil = () => {
             body: formData
         })
 
-        const data = await response.json()
+        const datos = await response.json()
         if (response.ok) {
-            console.log(data)
-            setCrearImagenAsociado(data)
+            console.log(datos)
+            setCrearImagenAsociado(datos)
         }
     }
 
@@ -728,7 +728,7 @@ export const Perfil = () => {
 
                                 <div>
                                     <label htmlFor="imagen">Imagen:</label>
-                                    <input type="file" name="crearImagenAsociado" accept="image/*" required ref={fileInputAsociadoRef} onChange={handleImagenAsociado} />
+                                    <input type="file" name="crearImagenAsociado" accept="image/*" required ref={fileInputAsociadoRef} onChange={handleImagenAsociado} disabled={crearImagenAsociado == '' ? true : false}/>
                                 </div>
 
                                 <button type="submit">Crear Asociado</button>
