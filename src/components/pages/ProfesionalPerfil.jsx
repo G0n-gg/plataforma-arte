@@ -171,7 +171,7 @@ export const ProfesionalPerfil = () => {
           <GaleriaProfesional usuario={userArtista} datosImagenes={galeria} galeria={true} ampliacion={ampliacionMouseOver}></GaleriaProfesional>
         </article>
 
-        {estadoLike == false ? <article className='like'><p>Recomendar!!!</p><VscThumbsup className='likeBoton' onClick={handleLike} /></article> : <article className='like'><p>Ya no me gusta</p><VscThumbsdown className='noLikeBoton' onClick={handleLike} /></article>}
+        {estadoLike == false ? <article className='like'><p>Ya no me gusta!</p><VscThumbsup className='likeBoton' onClick={handleLike} /></article> : <article className='like'><p>Recomendar</p><VscThumbsdown className='noLikeBoton' onClick={handleLike} /></article>}
 
 
       </section>
