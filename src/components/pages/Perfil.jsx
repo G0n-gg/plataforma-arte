@@ -387,6 +387,8 @@ export const Perfil = () => {
             if (fileInputAsociadoRef.current) fileInputAsociadoRef.current.value = null;
         }
 
+        console.log("nombreAsociado:", crearNombreAsociado,"enlaceAsociado:", crearEnlaceAsociado,"imagenAsociado", crearImagenAsociado)
+
         const response = await fetch(`${url}asociados`, {
             method: 'POST',
             body: JSON.stringify({
@@ -423,7 +425,7 @@ export const Perfil = () => {
         const data = await response.json()
         if (response.ok) {
             console.log(data)
-            //setCrearImagenAsociado(data)
+            setCrearImagenAsociado(data)
         }
     }
 
