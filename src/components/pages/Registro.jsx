@@ -27,12 +27,6 @@ export const Registro = () => {
       })
 
       let datos = await response.json()
-
-      try {
-        datos = await response.json();
-      } catch {
-        datos = {};
-      }
       
       if (!response.ok) {
         setErrorDatos(datos.error || 'Error no declarado')
