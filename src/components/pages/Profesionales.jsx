@@ -21,6 +21,11 @@ export const Profesionales = () => {
 
         const datos = await response.json()
 
+        if(datos == null) {
+          setListaProfesionales([])
+          return
+        }
+
         setListaProfesionales(datos)
       } catch (error) {
         console.error('Error en la carga de profesionales', error)
