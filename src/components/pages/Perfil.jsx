@@ -87,7 +87,7 @@ export const Perfil = () => {
 
             const datos = await response.json()
 
-            if (!response.ok || datos.error) {
+            if (!response.ok) {
                 redireccion('/login')
                 return
             }
