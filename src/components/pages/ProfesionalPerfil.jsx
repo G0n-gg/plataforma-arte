@@ -181,7 +181,7 @@ export const ProfesionalPerfil = () => {
         <form onSubmit={handleConsulta}>
 
           <div className="inputs">
-            <label htmlFor="contactoConsulta">Tu contacto:</label><input type="text" name="contactoConsulta" id="contactoConsulta" placeholder='Tu contacto' value={contactoConsulta} onChange={(e) => { setContactoConsulta(e.target.value) }} />
+            <label htmlFor="contactoConsulta">Tu contacto:</label><input type="text" name="contactoConsulta" id="contactoConsulta" placeholder='Tu contacto' value={contactoConsulta} onChange={(e) => {setContactoConsulta(e.target.value)}} />
           </div>
 
           <div className="textareas"><label htmlFor="proyectoConsulta">Tu idea:</label><textarea name="proyectoConsulta" id="proyectoConsulta" placeholder='Describe lo que quieres' maxLength={300} minLength={20} value={proyectoConsulta} onChange={(e) => setProyectoConsulta(e.target.value)}></textarea></div>

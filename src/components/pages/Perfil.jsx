@@ -957,7 +957,7 @@ export const Perfil = () => {
                             {consultas.map(c => (
                                 <li key={c.id}>
                                     <div className='consultaNombre'>{c.cliente}:</div>
-                                    <div className='consultaContacto'>Contacto: {c.contacto}:</div>
+                                    <div className='consultaContacto'>Contacto: {c.contacto}</div>
                                     <div className='consultaAsunto'>{c.consulta}</div>
                                     <VscReport className='iconReport' onClick={() => { handleMandarReporte(c.cliente, c.consulta) }} />
                                 </li>
