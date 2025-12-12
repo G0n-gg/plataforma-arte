@@ -92,10 +92,12 @@ export const Perfil = () => {
                 return
             }
 
-            setUser(datos)
-            setUsername(datos.username)
-            setRutaimagen(datos.imagenperfil)
-            setEmail(datos.email)
+            if (datos) {
+                setUser(datos)
+                setUsername(datos.username)
+                setRutaimagen(datos.imagenperfil)
+                setEmail(datos.email)
+            }
         }
 
         cargarPerfil()
@@ -149,23 +151,23 @@ export const Perfil = () => {
 
     useEffect(() => {
         const cargarOpiniones = async () => {
-          try {
-            const response = await fetch(`${url}opiniones`, {
-              method: 'GET',
-              credentials: 'include'
-            })
-    
-            const datos = await response.json()
-            console.log(datos)
-    
-            const invertirLista = datos.reverse()
-            setAdminOpiniones(invertirLista)
-          } catch (error) {
-            console.log(error)
-          }
+            try {
+                const response = await fetch(`${url}opiniones`, {
+                    method: 'GET',
+                    credentials: 'include'
+                })
+
+                const datos = await response.json()
+                console.log(datos)
+
+                const invertirLista = datos.reverse()
+                setAdminOpiniones(invertirLista)
+            } catch (error) {
+                console.log(error)
+            }
         }
         cargarOpiniones()
-      }, [])
+    }, [])
 
     const handleLogout = async (e) => {
         e.preventDefault()
@@ -348,7 +350,7 @@ export const Perfil = () => {
                 return
             }
 
-              if (datos.tipo == 'artista') {
+            if (datos.tipo == 'artista') {
                 const responseImagenes = await fetch(`${url}galeria/${adminUser}`, {
                     method: 'GET',
                     credentials: 'include'
@@ -361,7 +363,7 @@ export const Perfil = () => {
                     setAdminmsg('No se cargaron las imágenes')
                     return
                 }
-                
+
                 setImagenes(datosImgReverse)
             }
 
@@ -387,7 +389,7 @@ export const Perfil = () => {
             if (fileInputAsociadoRef.current) fileInputAsociadoRef.current.value = null;
         }
 
-        console.log("nombreAsociado:", crearNombreAsociado,"enlaceAsociado:", crearEnlaceAsociado,"imagenAsociado", crearImagenAsociado)
+        console.log("nombreAsociado:", crearNombreAsociado, "enlaceAsociado:", crearEnlaceAsociado, "imagenAsociado", crearImagenAsociado)
 
         const response = await fetch(`${url}asociados`, {
             method: 'POST',
@@ -413,7 +415,7 @@ export const Perfil = () => {
         e.preventDefault()
 
         setEstadoSubida(true)
-        
+
         const file = e.target.files[0]
         if (!file) return
 
@@ -591,10 +593,10 @@ export const Perfil = () => {
         }
     }
 
-     const handleGetOpiniones = async () => {
+    const handleGetOpiniones = async () => {
         try {
             const response = await fetch(`${url}opiniones`, {
-                method:'GET',
+                method: 'GET',
                 headers: { 'Content-type': 'application/json' },
                 credentials: 'include'
             })
@@ -614,7 +616,7 @@ export const Perfil = () => {
         setBotonOpiniones(!botonOpiniones);
     }
 
-     const handleBorrarOpiniones = async (id) => {
+    const handleBorrarOpiniones = async (id) => {
         try {
             const response = await fetch(`${url}opiniones/${id}`, {
                 headers: { 'Content-type': 'application/json' },
@@ -699,7 +701,7 @@ export const Perfil = () => {
 
                         <div className='msgActualizado'>{msgActualizado}</div>
 
-                        {adminTipo == 'artista' ? <GaleriaProfesional usuario={{ username: adminUsername }} datosImagenes={imagenes} galeria={false}></GaleriaProfesional> : null }
+                        {adminTipo == 'artista' ? <GaleriaProfesional usuario={{ username: adminUsername }} datosImagenes={imagenes} galeria={false}></GaleriaProfesional> : null}
 
                         <div className="botonesUsuario">
                             <button onClick={handleBorrarusuario}>Eliminar usuario</button>
